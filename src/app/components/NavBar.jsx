@@ -9,6 +9,8 @@ export default function NavBar() {
           <Link href='/'> <li>Home </li></Link>
           <Link href='/services'> <li>Services </li></Link>
           <Link href='/about'> <li>About </li></Link>
+          <Link href='/login'> <li>Login </li></Link>
+          <Link href='/register'> <li>Register </li></Link>
            
         </ul>
       </nav>
