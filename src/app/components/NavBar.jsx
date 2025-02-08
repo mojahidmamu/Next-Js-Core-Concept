@@ -1,6 +1,6 @@
 import React from "react";
 
-const NavBar = () => {
+export default function NavBar() {
   return (
     <div>
       <nav className="flex justify-center">
@@ -12,6 +12,4 @@ const NavBar = () => {
       </nav>
     </div>
   );
-};
-
-export default NavBar;
+}
