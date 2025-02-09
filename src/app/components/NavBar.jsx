@@ -18,7 +18,7 @@ export default function NavBar() {
             <Link href='/user-dashboard'> <li>Dashboard </li></Link>
             <Link href='/login'> <li>Login </li></Link>
             <Link href='/register'> <li>Register </li></Link>
-            <Link href='/not-found'> <li>Error Page </li></Link>
+            {/* <Link href='/not-found'> <li>Error Page </li></Link> */}
              
           </ul>
         </nav>

@@ -38,46 +38,59 @@ export default function ServicesDetailsPage({ params }) {
       description: "Comfortable and lightweight running shoes for athletes.",
     },
     {
-      "_id": 6,
-      "image": "https://images.pexels.com/photos/2529148/pexels-photo-2529148.jpeg",
-      "name": "Badminton Racket",
-      "description": "High-performance badminton racket with strong string tension."
+      _id: 6,
+      image:
+        "https://images.pexels.com/photos/2529148/pexels-photo-2529148.jpeg",
+      name: "Badminton Racket",
+      description:
+        "High-performance badminton racket with strong string tension.",
     },
     {
-      "_id": 7,
-      "image": "https://images.pexels.com/photos/1432031/pexels-photo-1432031.jpeg",
-      "name": "Cycling Helmet",
-      "description": "Protective and aerodynamic helmet for professional cyclists."
+      _id: 7,
+      image:
+        "https://images.pexels.com/photos/1432031/pexels-photo-1432031.jpeg",
+      name: "Cycling Helmet",
+      description:
+        "Protective and aerodynamic helmet for professional cyclists.",
     },
     {
-      "_id": 8,
-      "image": "https://images.pexels.com/photos/669008/pexels-photo-669008.jpeg",
-      "name": "Skateboard",
-      "description": "Durable and stylish skateboard for tricks and street skating."
+      _id: 8,
+      image: "https://images.pexels.com/photos/669008/pexels-photo-669008.jpeg",
+      name: "Skateboard",
+      description:
+        "Durable and stylish skateboard for tricks and street skating.",
     },
     {
-      "_id": 9,
-      "image": "https://images.pexels.com/photos/1661154/pexels-photo-1661154.jpeg",
-      "name": "Golf Club",
-      "description": "Precision-engineered golf club for improving your swing."
+      _id: 9,
+      image:
+        "https://images.pexels.com/photos/1661154/pexels-photo-1661154.jpeg",
+      name: "Golf Club",
+      description: "Precision-engineered golf club for improving your swing.",
     },
     {
-      "_id": 10,
-      "image": "https://images.pexels.com/photos/841130/pexels-photo-841130.jpeg",
-      "name": "Table Tennis Bat",
-      "description": "High-speed table tennis bat for professional tournaments."
+      _id: 10,
+      image: "https://images.pexels.com/photos/841130/pexels-photo-841130.jpeg",
+      name: "Table Tennis Bat",
+      description: "High-speed table tennis bat for professional tournaments.",
     },
   ];
 
   const id = params?.id;
   const singleData = data.find((d) => d._id == id);
-  return (
-    <div>
-      <h1 className="text-4xl">Services-Details-Page</h1>
-      <p>This is the id no: {id} </p>
-      <h1 className="text-4xl ">Name: {singleData.name} </h1>
-      <p>Details: {singleData.description} </p>
-      <img src={singleData.image} alt="" />
-    </div>
-  );
+  if (singleData) {
+    return (
+      <>
+        <h1 className="text-4xl">Services-Details-Page</h1>
+        <p>This is the id no: {id} </p>
+        <h1 className="text-4xl ">Name: {singleData.name} </h1>
+        <p>Details: {singleData.description} </p>
+        <img src={singleData.image} alt="" />
+      </>
+    );
+  } else {
+    return <>
+    <p>NOt Found Service</p>
+    </>
+  }
+ 
 }
